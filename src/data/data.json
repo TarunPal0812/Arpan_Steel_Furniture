@@ -1,0 +1,143 @@
+{
+  "siteConfig": {
+    "name": "Arpan Steel Furniture",
+    "phone": "+91 62968 42998",
+    "secondaryPhone": "+91 98317 56375",
+    "email": "info@arpansteelfurniture.in",
+    "address": "Orisha Trunk Rd, Kaijuri, Uluberia, Howrah, WB 711315",
+    "whatsappNumber": "916296842998"
+  },
+
+  "categories": ["All", "Almira", "Triple Door Almira", "Alna", "Dressing Alna", "Box Alna", "Showcase", "TV Showcase"],
+  "teamMembers": [
+    {
+      "name": "Mr. Arpan Dolui",
+      "role": "Founder & CEO",
+      "image": "team1",
+      "description": "As the Founder and CEO of Arpan Steel Furniture, I am proud to lead a company that has redefined quality, durability, and style in the steel furniture industry. My vision is to combine superior materials with cutting-edge technology to create products that exceed client expectations."
+    },
+    {
+      "name": "Mr. Haripada Dolui",
+      "role": "Co-Founder & COO",
+      "image": "team2",
+      "description": "As Co-Founder and COO, I am proud of our commitment to craftsmanship and precision. Every product we deliver reflects our promise to meet the evolving needs of homes, offices, and institutions across the country."
+    }
+  ],
+  "collections": [
+    { "title": "Corporate Solutions", "image": "p3", "count": "120+ Items" },
+    { "title": "Residential Luxury", "image": "p6", "count": "250+ Items" },
+    { "title": "Educational Series", "image": "p9", "count": "80+ Items" }
+  ],
+  "testimonials": [
+    {
+      "name": "Shasanka Sandhayki",
+      "comment": "The steel quality is beyond anything I've seen in the market. It transformed my workstation into a premium executive office.",
+      "role": "Business Owner"
+    },
+    {
+      "name": "Arpita Banerjee",
+      "comment": "I purchased home storage units. They are not only durable but surprisingly elegant. Exceptional delivery service as well.",
+      "role": "Interior Designer"
+    },
+    {
+      "name": "Amit Adak",
+      "comment": "Arpan Steel has been our go-to for all school furniture requirements. Reliable, safe, and built to withstand children's usage.",
+      "role": "School Administrator"
+    }
+  ],
+  "products": [
+    { 
+      "id": 1, "name": "Modern Steel Chair", "category": "Almira", 
+      "details": "78 inches X 34 inches X 21 inches", "price": "5,000", "image": "p1",
+      "material": "High-Grade Carbon Steel", "warranty": "5 Years",
+      "features": ["Rust Resistant", "Ergonomic Design", "Heavy Duty"]
+    },
+    { 
+      "id": 2, "name": "Luxury Steel Sofa", "category": "Triple Almira", 
+      "details": "75 inches X 48 inches X 21 inches", "price": "7,500", "image": "p2",
+      "material": "Premium Alloy Steel", "warranty": "3 Years",
+      "features": ["Powder Coated", "Soft Cushion Support", "Modern Finish"]
+    },
+    { 
+      "id": 3, "name": "Industrial Steel Table", "category": "Almira", 
+      "details": "78 inches X 38 inches X 21 inches", "price": "8,200", "image": "p3",
+      "material": "Reinforced Steel Frame", "warranty": "10 Years",
+      "features": ["Heat Resistant Surface", "Modular Design", "Anti-Scratch Feet"]
+    },
+    { 
+      "id": 4, "name": "Steel Bookshelf", "category": "Alna", 
+      "details": "66 inches X 34 inches X 14 inches", "price": "6,800", "image": "p4",
+      "material": "Cold-Rolled Steel", "warranty": "2 Years",
+      "features": ["Adjustable Shelves", "Slim Profile", "Dual Lock System"]
+    },
+    { 
+      "id": 5, "name": "Minimalist Steel Bed", "category": "Showcase", 
+      "details": "72 inches X 66 inches X 14 inches", "price": "12,000", "image": "p5",
+      "material": "Structural Grade Steel", "warranty": "7 Years",
+      "features": ["No-Squeak Joint Technology", "Contemporary Styling", "Eco-friendly Paint"]
+    },
+    { 
+      "id": 6, "name": "Modern Steel Dining Set", "category": "Almira", 
+      "details": "78 inches X 38 inches X 21 inches", "price": "14,500", "image": "p6",
+      "material": "Treated Steel Alloy", "warranty": "5 Years",
+      "features": ["Stackable Chairs", "UV Resistant", "Low Maintenance"]
+    },
+    { 
+      "id": 7, "name": "Compact Steel Wardrobe", "category": "Almira", 
+      "details": "78 inches X 35 inches X 21 inches", "price": "11,000", "image": "p7",
+      "material": "Gauge 22 Steel", "warranty": "5 Years",
+      "features": ["Built-in Locker", "Sleek Mirror Finish", "Ventilated Doors"]
+    },
+    { 
+      "id": 8, "name": "Steel Coffee Table", "category": "Box Alna", 
+      "details": "66 inches X 34 inches X 14 inches", "price": "4,500", "image": "p8",
+      "material": "Brushed Steel", "warranty": "1 Year",
+      "features": ["Compact Design", "Sturdy Base", "Easy Assemble"]
+    },
+    { 
+      "id": 9, "name": "Classic Steel Cabinet", "category": "Showcase", 
+      "details": "72 inches X 46 inches X 16 or 14 inches", "price": "9,500", "image": "p9",
+      "material": "Industrial Plate Steel", "warranty": "5 Years",
+      "features": ["Multi-tier Storage", "Dust Proof", "Magnetic Latches"]
+    },
+    { 
+      "id": 10, "name": "Steel Recliner Chair", "category": "Showcase", 
+      "details": "72 inches X 46 inches X 13 inches", "price": "13,000", "image": "p10",
+      "material": "High-Tension Steel", "warranty": "3 Years",
+      "features": ["Adjustable Angle", "Reinforced Joints", "Max Comfort Liner"]
+    },
+    { "id": 11, "name": "Heavy-Duty Steel Workbench", "category": "Showcase", "details": "68 inches X 46 inches X 14 inches", "price": "15,000", "image": "p11", "material": "Industrial Grade Steel", "warranty": "10 Years", "features": ["High Load Capacity", "Rust Proof Coating", "Adjustable Height"] },
+    { "id": 12, "name": "Elegant Steel Shoe Rack", "category": "Almira", "details": "78 inches X 38 inches X 21 inches", "price": "3,800", "image": "p12", "material": "High-Grade Carbon Steel", "warranty": "2 Years", "features": ["Ventilated Shelves", "Compact Design", "Scratch Resistant"] },
+    { "id": 13, "name": "Folding Steel Study Desk", "category": "Almira", "details": "78 inches X 38 inches X 21 inches", "price": "6,200", "image": "p13", "material": "Lightweight Alloy Steel", "warranty": "3 Years", "features": ["Space Saving", "Easy to Move", "Durable Surface"] },
+    { "id": 14, "name": "Steel Locker Cabinet", "category": "Triple Door Almira", "details": "78 inches X 48 inches X 21 inches", "price": "10,500", "image": "p14", "material": "Reinforced Steel", "warranty": "5 Years", "features": ["Multi-Point Lock", "Name Tag Slots", "Industrial Finish"] },
+    { "id": 15, "name": "Outdoor Steel Bench", "category": "Showcase", "details": "60 inches X 66 inches X 14 inches", "price": "7,300", "image": "p15", "material": "Galvanized Steel", "warranty": "5 Years", "features": ["Weather Resistant", "UV Protected", "Ergonomic Curve"] },
+    { "id": 16, "name": "Wall-Mounted Steel Rack", "category": "TV Showcase", "details": "66 inches X 42 inches X 16 inches", "price": "4,200", "image": "p16", "material": "Powder Coated Steel", "warranty": "2 Years", "features": ["Heavy Duty Anchors", "Minimalist Look", "Modular Support"] },
+    { "id": 17, "name": "Adjustable Steel Computer Table", "category": "Box Alna", "details": "68 inches X 34 inches X 14 inches", "price": "8,500", "image": "p17", "material": "High-Tension Steel", "warranty": "3 Years", "features": ["Cable Management", "Keyboard Tray", "Scratch Proof Tabletop"] },
+    { "id": 18, "name": "Stainless Steel Bar Stools", "category": "Alna", "details": "68 inches X 34 inches X 14 inches", "price": "6,500", "image": "p18", "material": "304 Stainless Steel", "warranty": "5 Years", "features": ["Footrest Included", "Swivel Base", "Polished Finish"] },
+    { "id": 19, "name": "Luxury Steel TV Unit", "category": "TV Showcase", "details": "66 inches X 42 inches X 14 inches", "price": "12,800", "image": "p19", "material": "Premium Alloy Steel", "warranty": "5 Years", "features": ["Toughened Glass Top", "Hidden Wiring", "Ample Storage"] },
+    { "id": 21, "name": "Steel Frame Wall Mirror", "category": "Showcase", "details": "72 inches X 46 inches X 18 inches", "price": "5,600", "image": "p21", "material": "Brushed Steel Frame", "warranty": "2 Years", "features": ["Corrosion Resistant", "HD Float Glass", "Slim Border"] },
+    { "id": 22, "name": "Industrial Steel Bar Table", "category": "Triple Door Almira", "details": "72 inches X 48 inches X 21 inches", "price": "11,000", "image": "p22", "material": "Heavy Gauge Steel", "warranty": "7 Years", "features": ["Anti-Skid Base", "Matt Finish", "High Durability"] },
+    { "id": 23, "name": "Steel Document Filing Cabinet", "category": "Showcase", "details": "72 inches X 60 inches X 14 or 12 inches.", "price": "13,500", "image": "p23", "material": "Cold-Rolled Steel", "warranty": "5 Years", "features": ["Central Locking System", "Smooth Drawer Slides", "Heavy Load Capacity"] },
+    { "id": 24, "name": "Outdoor Steel Grill Stand", "category": "Triple Door Almira", "details": "72 inches X 48 inches X 21 inches", "price": "7,200", "image": "p24", "material": "Heat Resistant Steel", "warranty": "3 Years", "features": ["Detachable Parts", "Rust Proof Paint", "Stable Base"] },
+    { "id": 25, "name": "Modern Steel Dressing Table", "category": "Almira", "details": "72 inches X 34 inches X 21 inches", "price": "15,300", "image": "p25", "material": "Premium Plate Steel", "warranty": "5 Years", "features": ["LED Lighting Built-in", "Hidden Compartments", "Elegant Design"] },
+    { "id": 26, "name": "Luxury Steel Bedside Table", "category": "Triple Door Almira", "details": "72 inches X 48 inches X 21 inches", "price": "4,800", "image": "p26", "material": "Treated Steel Alloy", "warranty": "2 Years", "features": ["Silent Close Drawers", "Spill Resistant", "Lightweight"] },
+    { "id": 27, "name": "Tall Steel Display Shelf", "category": "Showcase", "details": "72 inches X 60 inches X 14.5 inches", "price": "10,600", "image": "p27", "material": "Structural Grade Steel", "warranty": "5 Years", "features": ["Open Design", "Reinforced Edges", "Matte Texture"] },
+    { "id": 28, "name": "Multipurpose Steel Storage Rack", "category": "Dressing Alna", "details": "66 inches X 42 inches X 14 inches", "price": "8,400", "image": "p28", "material": "Galvanized Steel", "warranty": "4 Years", "features": ["Adjustable Tiers", "High Capacity", "Easy Cleaning"] },
+    { "id": 29, "name": "Industrial Steel Filing Rack", "category": "Alna", "details": "66 inches X 34 inches X 14 inches", "price": "9,700", "image": "p29", "material": "Commercial Grade Steel", "warranty": "7 Years", "features": ["Open File Access", "Label Holders", "Stable Design"] },
+    { "id": 30, "name": "Luxury Steel Ottoman", "category": "Almira", "details": "78 inches X 34 inches X 21 inches", "price": "6,300", "image": "p30", "material": "Steel Frame & Fabric", "warranty": "2 Years", "features": ["Plush Cushion", "Sturdy Frame", "Modern Accent"] },
+    { "id": 31, "name": "Foldable Steel Camping Chair", "category": "Showcase", "details": "72 inches X 66 inches X 14 inches", "price": "5,200", "image": "p31", "material": "High-Tension Tubular Steel", "warranty": "1 Year", "features": ["Ultra Lightweight", "Weatherproof", "Compact Fold"] }
+  ],
+
+  "vision": "We are committed to leading the furniture manufacturing industry by delivering high-quality, value-driven products with unmatched service—ensuring excellence from design to delivery.",
+  "mission": [
+    "Drive continuous innovation to anticipate and exceed customer expectations.",
+    "Uphold uncompromising quality and craftsmanship to create durable, high-performance furniture.",
+    "Champion sustainability by integrating eco-friendly materials and responsible manufacturing practices."
+  ],
+  "career": {
+    "title": "Join Our Legacy",
+    "description": "We are always looking for passionate craftsmen, designers, and innovators to join our growing team. Shape the future of steel furniture with us.",
+    "status": "Currently, we don't have any active openings, but we are always looking for talent. Send your CV to our email for future consideration."
+  }
+}
+
