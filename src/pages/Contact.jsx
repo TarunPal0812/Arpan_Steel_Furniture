@@ -183,7 +183,7 @@ function Contact() {
             </div>
 
             {/* Google Map Section */}
-            <div className="rounded-[40px] overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 h-80 shadow-2xl border-8 border-white">
+            <div tabIndex="0" className="rounded-[40px] overflow-hidden grayscale hover:grayscale-0 active:grayscale-0 focus:grayscale-0 transition-all duration-700 h-80 shadow-2xl border-8 border-white">
               <iframe
                 title="Arpan Steel Furniture Location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.5356288992034!2d88.0686083!3d22.468001400000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0285a0af94cbd5%3A0xa084edbc9445e658!2sArpan%20Steel%20Furniture!5e1!3m2!1sen!2sin!4v1741287560625!5m2!1sen!2sin"

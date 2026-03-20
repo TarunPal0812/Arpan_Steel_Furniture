@@ -132,7 +132,7 @@ function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {data.collections.map((cat, i) => (
               <Link to="/catalog" key={i} className="group relative rounded-[40px] overflow-hidden bg-slate-100 h-[450px]" data-aos="zoom-in" data-aos-delay={i * 100}>
-                <img src={assets[cat.image]} alt={cat.title} className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" />
+                <img src={assets[cat.image]} alt={cat.title} className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110 group-active:grayscale-0 group-active:scale-110 group-focus:grayscale-0 group-focus:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
                 <div className="absolute bottom-10 left-10">
                   <p className="text-slate-400 text-xs font-bold uppercase tracking-widest mb-1">{cat.count}</p>
