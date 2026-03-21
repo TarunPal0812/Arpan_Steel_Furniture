@@ -57,14 +57,14 @@ function Catalog() {
 
   return (
     <div className="bg-slate-50 min-h-screen">
-      {/* Header Section */}
+
       <div className="bg-slate-900 text-white pt-32 pb-16 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4" data-aos="fade-down">Product Catalog</h1>
         <p className="text-slate-400 max-w-2xl mx-auto italic">Browse through our premium collection of durable and stylish steel furniture.</p>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col lg:flex-row gap-8">
-        {/* Sidebar Filters */}
+
         <div className="w-full lg:w-1/4">
           <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 sticky top-24">
             <h3 className="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
@@ -100,7 +100,7 @@ function Catalog() {
           </div>
         </div>
 
-        {/* Product Grid */}
+
         <div className="w-full lg:w-3/4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProducts.map((product) => (

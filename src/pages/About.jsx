@@ -17,7 +17,7 @@ function About() {
 
   return (
     <div className="bg-slate-50 min-h-screen">
-      {/* Hero Section */}
+
       <div className="bg-slate-900 text-white pt-32 pb-20 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4" data-aos="fade-down">About Our Journey</h1>
         <p className="text-slate-400 max-w-2xl mx-auto italic">Learn about the visionaries behind Arpan Steel Furniture and our commitment to excellence.</p>
@@ -43,7 +43,7 @@ function About() {
           ))}
         </div>
 
-        {/* Vision & Mission Summary */}
+
         <div className="mt-24 grid md:grid-cols-2 gap-8" data-aos="fade-up">
           <div className="bg-slate-900 text-white p-10 rounded-3xl shadow-2xl">
             <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
@@ -66,5 +66,3 @@ function About() {
 
 
 export default About;
-
-

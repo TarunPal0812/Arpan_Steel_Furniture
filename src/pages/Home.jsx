@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,8 +12,35 @@ import * as assets from "../assets";
 import data from "../data/data.json";
 
 function Home() {
+  const collectionRefs = useRef([]);
+  const [revealedCards, setRevealedCards] = useState(new Set());
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
+  }, []);
+
+
+  useEffect(() => {
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+    if (!isMobile) return;
+
+    const observers = [];
+    collectionRefs.current.forEach((card, i) => {
+      if (!card) return;
+      const obs = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setRevealedCards((prev) => new Set([...prev, i]));
+            obs.disconnect();
+          }
+        },
+        { threshold: 0.15 }
+      );
+      obs.observe(card);
+      observers.push(obs);
+    });
+
+    return () => observers.forEach((o) => o.disconnect());
   }, []);
 
 
@@ -22,7 +49,7 @@ function Home() {
   return (
     <div className="bg-white overflow-hidden">
       <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-        {/* Abstract Background Elements */}
+
         <div className="absolute top-0 right-0 -mr-32 -mt-32 w-[600px] h-[600px] bg-slate-900 rounded-full opacity-[0.03] blur-3xl"></div>
         <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-green-600 rounded-full opacity-[0.03] blur-3xl"></div>
         
@@ -61,20 +88,19 @@ function Home() {
           </div>
 
           <div className="relative lg:mt-0 mt-8" data-aos="fade-left" data-aos-delay="200">
-            {/* Background Decorative Element */}
+
             <div className="absolute -inset-6 bg-slate-100 rounded-[60px] -rotate-2 -z-10 translate-x-4 translate-y-4"></div>
             
             <div className="relative w-full max-w-[650px] lg:max-w-[800px] mx-auto rounded-xl overflow-hidden shadow-2xl border-2 border-white bg-white p-0.5 sm:p-1">
               <img 
                 src={assets.cta} 
                 alt="Arpan Steel Furniture Banner" 
-                className="w-full h-auto object-contain block" 
+                className="w-full h-auto object-contain block"
+                fetchpriority="high"
+                decoding="async"
               />
             </div>
 
-
-            
-            {/* Float Badge */}
             <div className="absolute -bottom-10 -right-6 lg:-bottom-16 lg:-right-10 bg-white p-5 lg:p-6 rounded-3xl shadow-2xl animate-float hidden sm:block z-20">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-green-500 rounded-2xl flex items-center justify-center text-white text-xl">
@@ -131,8 +157,21 @@ function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {data.collections.map((cat, i) => (
-              <Link to="/catalog" key={i} className="group relative rounded-[40px] overflow-hidden bg-slate-100 h-[450px]" data-aos="zoom-in" data-aos-delay={i * 100}>
-                <img src={assets[cat.image]} alt={cat.title} className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110 group-active:grayscale-0 group-active:scale-110 group-focus:grayscale-0 group-focus:scale-110" />
+              <Link
+                to="/catalog"
+                key={i}
+                ref={(el) => (collectionRefs.current[i] = el)}
+                className="collection-card group relative rounded-[40px] overflow-hidden bg-slate-100 h-[450px]"
+                data-aos="zoom-in"
+                data-aos-delay={i * 100}
+              >
+                <img
+                  src={assets[cat.image]}
+                  alt={cat.title}
+                  loading="lazy"
+                  decoding="async"
+                  className={`collection-img w-full h-full object-cover${revealedCards.has(i) ? " revealed" : ""}`}
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
                 <div className="absolute bottom-10 left-10">
                   <p className="text-slate-400 text-xs font-bold uppercase tracking-widest mb-1">{cat.count}</p>
@@ -169,7 +208,7 @@ function Home() {
               <SwiperSlide key={index}>
                 <div className="bg-slate-800 rounded-3xl overflow-hidden hover:shadow-2xl hover:shadow-green-500/10 transition-all duration-500 border border-slate-700 p-3">
                   <div className="h-64 rounded-2xl overflow-hidden mb-4">
-                    <img src={assets[product.image]} alt={product.name} className="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
+                    <img src={assets[product.image]} alt={product.name} loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
                   </div>
                   <div className="p-4 flex justify-between items-center text-left">
                     <div className="flex-1 min-w-0 pr-4">
@@ -219,7 +258,7 @@ function Home() {
       <section className="py-32 bg-white relative">
         <div className="max-w-5xl mx-auto px-6">
           <div className="bg-slate-900 rounded-[60px] p-12 lg:p-24 text-center text-white relative overflow-hidden shadow-2xl">
-            {/* Background Accent */}
+
             <div className="absolute -top-32 -left-32 w-64 h-64 bg-green-500 rounded-full blur-[120px] opacity-20"></div>
             
             <h2 className="text-4xl lg:text-6xl font-bold mb-8 relative z-10" data-aos="fade-up">Ready for a <br/><span className="text-green-400">Masterpiece?</span></h2>

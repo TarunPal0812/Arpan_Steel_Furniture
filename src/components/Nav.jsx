@@ -16,12 +16,12 @@ function Nav() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close menu on route change
+
   useEffect(() => {
     setNavOpen(false);
   }, [location]);
 
-  // Body scroll lock when menu is open
+
   useEffect(() => {
     if (navOpen) {
       document.body.style.overflow = "hidden";
@@ -55,7 +55,7 @@ function Nav() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         
-        {/* Logo Section */}
+
         <Link to="/" className="flex items-center gap-3 group">
           <div className="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center transition-transform group-hover:rotate-12">
             <img src={assets.logo} alt="ASF" className="w-7 h-7 object-contain brightness-0 invert" />
@@ -68,7 +68,7 @@ function Nav() {
           </div>
         </Link>
 
-        {/* Desktop Menu */}
+
         <ul className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <li key={link.path}>
@@ -94,7 +94,7 @@ function Nav() {
           </li>
         </ul>
 
-        {/* Mobile Toggle */}
+
         <button 
           onClick={() => setNavOpen(!navOpen)}
           className="lg:hidden w-10 h-10 flex items-center justify-center text-slate-900 text-xl z-[1100] relative"
@@ -105,7 +105,7 @@ function Nav() {
 
       </div>
 
-      {/* Mobile Menu Overlay */}
+
       <div 
         className={`fixed inset-0 bg-white z-[1050] transition-transform duration-500 lg:hidden ${
           navOpen ? "translate-x-0" : "translate-x-full"

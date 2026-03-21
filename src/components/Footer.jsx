@@ -9,7 +9,7 @@ function Footer() {
   return (
     <footer className="bg-slate-950 text-slate-400 pt-20 pb-10 border-t border-slate-900">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-        {/* Brand Section */}
+
         <div className="space-y-6" data-aos="fade-up">
           <h3 className="text-2xl font-bold text-white">{siteConfig.name}</h3>
           <p className="text-sm leading-relaxed">
@@ -33,7 +33,7 @@ function Footer() {
           </div>
         </div>
 
-        {/* Quick Links */}
+
         <div className="space-y-6" data-aos="fade-up" data-aos-delay="100">
           <h4 className="font-bold text-white uppercase tracking-widest text-xs">
             Quick Navigation
@@ -68,7 +68,7 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Contact Info */}
+
         <div className="space-y-6" data-aos="fade-up" data-aos-delay="200">
           <h4 className="font-bold text-white uppercase tracking-widest text-xs">
             Contact Details
@@ -99,7 +99,7 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Location Map */}
+
         <div className="space-y-6" data-aos="fade-up" data-aos-delay="300">
           <h4 className="font-bold text-white uppercase tracking-widest text-xs">
             Our Location
@@ -118,7 +118,7 @@ function Footer() {
         </div>
       </div>
 
-      {/* Copyright Bar */}
+
       <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-widest font-bold">
         <p>
           &copy; {new Date().getFullYear()} Arpan Steel Furniture. All Rights

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaClock } from "react-icons/fa";
@@ -8,9 +8,29 @@ function Contact() {
   const { siteConfig } = data;
   const [formData, setFormData] = useState({ name: "", email: "", mobile: "", message: "" });
   const [status, setStatus] = useState("");
+  const [mapRevealed, setMapRevealed] = useState(false);
+  const mapRef = useRef(null);
 
   useEffect(() => {
     AOS.init({ duration: 800 });
+  }, []);
+
+
+  useEffect(() => {
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+    if (!isMobile || !mapRef.current) return;
+
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setMapRevealed(true);
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.15 }
+    );
+    obs.observe(mapRef.current);
+    return () => obs.disconnect();
   }, []);
 
   const handleChange = (e) => {
@@ -42,7 +62,7 @@ function Contact() {
 
   return (
     <div className="bg-slate-50 min-h-screen">
-      {/* Hero Header */}
+
       <div className="bg-slate-900 text-white pt-32 pb-20 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4" data-aos="fade-down">Contact Us</h1>
         <p className="text-slate-400 max-w-2xl mx-auto italic">We are here to help you transform your space. Reach out to us for inquiries, bulk orders, or support.</p>
@@ -51,7 +71,7 @@ function Contact() {
       <div className="max-w-7xl mx-auto px-6 py-20">
         <div className="flex flex-col lg:flex-row gap-16">
           
-          {/* Left: Contact Information */}
+
           <div className="lg:w-1/3 space-y-8" data-aos="fade-right">
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-6">Get In Touch</h2>
@@ -106,7 +126,7 @@ function Contact() {
           </div>
 
 
-          {/* Right: Contact Form & Map */}
+
           <div className="lg:w-2/3 space-y-12" data-aos="fade-left">
             <div className="bg-white p-10 rounded-[40px] shadow-2xl shadow-slate-200/50 border border-slate-100">
               <h3 className="text-2xl font-bold text-slate-900 mb-8">Send us a Message</h3>
@@ -182,8 +202,12 @@ function Contact() {
               </form>
             </div>
 
-            {/* Google Map Section */}
-            <div tabIndex="0" className="rounded-[40px] overflow-hidden grayscale hover:grayscale-0 active:grayscale-0 focus:grayscale-0 transition-all duration-700 h-80 shadow-2xl border-8 border-white">
+
+            <div
+              ref={mapRef}
+              tabIndex="0"
+              className={`map-wrapper rounded-[40px] overflow-hidden h-80 shadow-2xl border-8 border-white${mapRevealed ? " revealed" : ""}`}
+            >
               <iframe
                 title="Arpan Steel Furniture Location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.5356288992034!2d88.0686083!3d22.468001400000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0285a0af94cbd5%3A0xa084edbc9445e658!2sArpan%20Steel%20Furniture!5e1!3m2!1sen!2sin!4v1741287560625!5m2!1sen!2sin"
